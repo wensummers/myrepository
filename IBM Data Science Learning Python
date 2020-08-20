@@ -1,0 +1,796 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+# First Python output
+print('Hello, Python!')
+
+# Check Python version
+import sys
+print(sys.version)
+
+# Practice on writing comments
+print('Hello, Python!') # This line prints a string
+# print('Hi')
+
+# Integer
+11
+
+# Float
+2.14
+
+# String
+"Hello, Python 101!"
+
+# type identification
+type(12)
+
+type(2.14)
+
+print(sys.float_info)
+
+# typecasting
+print(float(2))
+print(int(2.99))
+print(str(2.99))
+
+# Boolean
+print(int(True))
+print(int(False))
+print(type(True))
+print(type(False))
+print(bool(1))
+print(bool(0))
+
+# use quotation makrs for defining a string
+print("Michael Jackson")
+
+# string can be a variable
+Name = "Michael Jackson"
+print(Name)
+
+# indexing
+print(Name[0]) # returns first index
+print(Name[-1]) # returns last position on index
+
+# length of a string
+print(len(Name))
+
+# Slicing
+# Slice of variable 'Name' with only index 0 to index 3
+print(Name[0:4])
+# Slice of variable 'Name' with only index 8 to index 11
+print(Name[8:12])
+
+# Stride
+# Every second element
+print(Name[::2])
+
+# Every second element from index 0 to index 4
+print(Name[0:5:2])
+
+# Concatenation
+Statement = Name + " is the best"
+print(Statement)
+
+# Replication
+print(Statement* 3)
+
+# Escape Sequence
+print("Michael Jackson\n is the best")
+
+# tab
+print("Michael Jackson\t is the best")
+
+# to include backslash in the string
+print("Michael Jackson \\ is the best")
+
+# r tells python that string will be displayed as raw string
+print(r"Michael Jackson \ is the best")
+
+# Convert all the characters in string to upper case
+A = "Thriller is the sixth studio album"
+print("Before upper", A)
+B = A.upper()
+print("After upper:", B)
+
+# Replace the old substring with the new target substring is the segment has been found in the string
+A = "Michael Jackson is the best"
+B = A.replace('Michael', 'Janet')
+print(B)
+
+# Find substring in the string, returns index
+Name = "Michael Jackson"
+print(Name.find('el'))
+print(Name.find('Jack'))
+# if substring does not exist in string
+print(Name.find('assmatass')) # returns -1
+
+# Create a tuple
+tuple1 = ("disco",10,1.2)
+print(tuple1)
+
+# Display type of tuple created
+print(type(tuple1))
+
+# Print variables on each index of tuple
+print(tuple1[0])
+print(tuple1[1])
+print(tuple1[2])
+
+# print type of value in each tuple index
+print(type(tuple1[0]))
+print(type(tuple1[1]))
+print(type(tuple1[2]))
+
+# use negative index to get the value of the last element
+print(tuple1[-1])
+
+# Concatenate two tuples
+tuple2 = tuple1 + ("hard rock", 10)
+print(tuple2)
+
+# Slice tuple
+print(tuple2[0:3])
+
+# length of tuple
+print(len(tuple2))
+
+# Sorting, redefine tuple
+Ratings = (0,9,6,5,10,8,9,6,2)
+RatingsSorted = sorted(Ratings)
+print(RatingsSorted)
+
+# Nesting Tuple
+NestedT = (1, 2, ("pop","rock") , (3,4),("disco",(1,2)))
+
+# Printing elements on the index of a nested tuple
+print("Element 0 of Tuple: ", NestedT[0])
+print("Element 1 of Tuple: ", NestedT[1])
+print("Element 2 of Tuple: ", NestedT[2])
+print("Element 3 of Tuple: ", NestedT[3])
+print("Element 4 of Tuple: ", NestedT[4])
+
+# Printing element on each index, including nest index
+print("Element 2, 0 of Tuple: ", NestedT[2][0])
+print("Element 2, 1 of Tuple: ", NestedT[2][1])
+print("Element 3, 0 of Tuple: ", NestedT[3][0])
+print("Element 3, 1 of Tuple: ", NestedT[3][1])
+print("Element 4, 0 of Tuple: ", NestedT[4][0])
+print("Element 4, 1 of Tuple: ", NestedT[4][1])
+
+# Print the first element in the second nested tuple
+print(NestedT[2][1][0])
+
+# Print the second element in the second nested tuple
+print(NestedT[2][1][1])
+
+# Creating lists
+L = ["Michael Jackson", 10.1, 1982]
+print(L)
+
+# Can print both negative and positive elements from list
+print('the same element using negative and positive indexing:\n Positive:', L[0], '\n Negative:', L[-3])
+print('the same element using negative and positive indexing:\n Positive:', L[1], '\n Negative:', L[-2])
+print('the same element using negative and positive indexing:\n Positive:', L[2], '\n Negative:', L[-1])
+
+# Lists can contain strings, floats, and integers
+# Sample List --> type is 'list'
+print(type(L))
+
+# Slicing in list
+L = ["Micheal Jackson", 10.1, 1982, "MJ", 1]
+print(L)
+print(L[3:5])
+
+# Extend a list
+L = ["Michael Jackson", 10.2]
+print(L)
+L.extend(['pop',10])
+print(L)
+
+# append adds elements to list
+L = ["Michael Jackson", 10.2]
+print(L)
+L.append(['pop',10]) # Will add element as nested list
+print(L)
+
+# extend adds elements to the list not as nested list
+L = ["Michael Jackson", 10.2]
+print(L)
+L.extend(['pop',10])
+print(L)
+
+L.append(['a','b'])
+print(L)
+
+# Lists are mutable and can be changed
+A = ["disco", 10, 1.2]
+print('Before change: ', A)
+A[0]= 'hard rock'
+print('After change: ', A)
+
+# Deletion of element
+print('Before change: ', A)
+del(A[0])
+print('After change: ', A)
+
+# split string, default split criteria is space
+print('hard rock'.split())
+
+# splitting string using comma
+print('A,B,C,D'.split(','))
+
+# Copy (copy by reference) the list A
+A = ["hard rock", 10, 1.2]
+B = A
+print('A:', A)
+print('B:', B)
+
+# Examine copy by reference
+print('B[0]:', B[0])
+A[0] = "banana"
+print('B[0]:', B[0])
+
+# Clone (clone by value) the list A
+B = A[:]
+print(B)
+
+# Now you can change A and B will not change
+print('B[0]:', B[0])
+A[0] = "hard rock"
+print('B[0]:', B[0])
+
+# Dictionaries
+# Creat a dictionary
+Dict = {"key1": 1, "key2": "2", "key3": [3,3,3], "key4": (4,4,4), ('key5'): 5, (0,1): 6}
+print(Dict)
+
+# Access to value by key
+print(Dict["key1"])
+print(Dict[(0, 1)])
+
+# Sample Dictionary
+release_year_dict = {"Thriller": "1982", "Back in Black": "1980", "The Dark Side of the Moon": "1973", "The Bodyguard": "1992", "Bat Out of Hell": "1977", "Their Greatest Hits (1971 - 1975)": "1976", "Saturday Night Fever": "1977", "Rumours": "1977"}
+print(release_year_dict)
+
+# Get value by keys
+print(release_year_dict['Thriller'])
+print(release_year_dict['The Bodyguard'])
+
+# Get all the keys in a dictionary
+print(release_year_dict.keys())
+
+# Get all the values in a dictionary
+print(release_year_dict.values())
+
+# Append value with key into dictionary
+release_year_dict['Graduation'] = '2007'
+print(release_year_dict)
+
+# Delete entries by key
+del(release_year_dict['Thriller'])
+del(release_year_dict['Graduation'])
+print(release_year_dict)
+
+# Verify the key is in the dictionary: returns Boolean
+'The Bodyguard' in release_year_dict
+print('The Bodyguard' in release_year_dict)
+
+# Create a set
+set1 = {"pop", "rock", "soul", "hard rock", "rock", "R&B", "rock", "disco"}
+print(set1)
+
+# Can also create a set from a list
+album_list = ["Michael Jackson", "Thriller", 1982, "00:42:19", "Pop, Rock, R&B", 46.0, 65, "30-Nov-82", None, 10.0]
+album_set = set(album_list)
+print(album_set)
+
+# creating set from a New List
+music_genres = set(["pop", "pop", "rock", "folk rock", "hard rock", "soul", "progressive rock", "soft rock", "R&B", "disco"])
+print(music_genres)
+
+# Sample set with operations
+A = set(["Thriller", "Back in Black", "AC/DC"])
+print(A)
+# Add element to set
+A.add("NSYNC")
+A.add("NSYNC") # Note that it only adds the element once --> It cannot be duplicated
+print(A)
+
+# Remove element from set
+A.remove("NSYNC")
+print(A)
+
+# Verify element in set
+print("AC/DC" in A) # returns boolean
+
+album_set1 = set(["Thriller", "AC/DC", "Back in Black"])
+album_set2 = set(["AC/DC", "Back in Black", "The Dark Side of the Moon"])
+
+# Note the overlap
+print(album_set1, album_set2)
+
+# find the intersection
+intersection = album_set1 & album_set2
+print(intersection)
+
+# find the difference in set1 but not set2
+print(album_set1.difference(album_set2))
+
+# find the difference in set2 but not set1
+print(album_set2.difference(album_set1))
+
+# find the intersection of album_set1 and album_set2
+print(album_set1.intersection(album_set2))
+
+# find the union of two sets
+print(album_set1.union(album_set2))
+
+# Check if the set is a super set or subset
+print(set(album_set1).issuperset(album_set2))
+print(set(album_set2).issubset(album_set1))
+print(set({"Back in Black", "AC/DC"}).issubset(album_set1))
+print(album_set1.issuperset({"Back in Black", "AC/DC"}))
+
+# Conditions
+# Condition Equal
+a = 5
+print(a==6) # returns false
+
+# Greater than
+print(a > 6) # returns false
+
+# Less than
+print(a < 3) # returns false
+
+# inequality sign
+print(a!=6) # returns true
+
+# can compare strings as well
+print("AC/DC" == "Michael Jackson") # returns false
+print("AC/DC" != "Michael Jackson") # returns true
+
+# can compare values for letters as well
+print('B' > 'A') # returns true as the ASCII code for 'A' is 101 and 'B' is 102
+print('BA' > 'AB') # returns true as the first letter takes precedence in ordering
+
+# Branching
+
+# The if statement
+age = 19
+
+# expression that can be true or false
+if age > 18:
+    print("you can enter")
+        # expression indented --> conditional on true
+print("move on")
+# The statement will run whether or not condition is true
+        
+# the else statement
+
+age = 18
+
+if age > 18:
+    print("you can enter")
+else:
+    print("go see Meat Loaf")
+print("move on")
+
+# the elif statement
+
+age = 18
+
+if age > 18:
+    print("you can enter")
+elif age == 18:
+    print("go see Pink Floyd")
+else:
+    print("go see Meat Loaf")
+print("move on")
+
+# Example of condition statement
+
+album_year = 1983
+album_year1 = 1970
+
+if album_year1 > 1980:
+    print("Album year is greater than 1980")
+else:
+    print('Less than 1980')
+
+print('do something...')
+
+# Conditions with and/or
+
+album_year = 1980
+
+if(album_year > 1979) and (album_year < 1990):
+    print("Album year was in between 1980 and 1989")
+
+print("")
+print("Do Stuff...")
+# For and statements, only returns true if both conditions are met
+
+# "or" statement
+
+album_year = 1990
+
+if(album_year < 1980) or (album_year > 1989):
+    print("Album was not made in the 1980's")
+
+else:
+    print("The Album was made in the 1980's")
+
+# the not statement
+
+album_year = 1983
+
+if not(album_year == '1984'):
+    print ("Album year is not 1984")
+        
+# range function
+print(range(3))
+
+# 'for' loop
+
+dates = [1982, 1980, 1973]
+N = len(dates)
+
+for i in range(N):
+    print(dates[i])
+    
+# another example
+
+for i in range(0, 8):
+    print(i)
+
+for year in dates:
+    print(year)
+    
+# using 'for' loop to change elements in a list
+
+squares = ['red', 'yellow', 'green', 'purple', 'blue']
+
+for i in range(0, 5):
+    print("Before square ", i, 'is', squares[i])
+    squares [i] = 'weight'
+    print("After square ", i, 'is', squares[i])
+    
+# loop through list and iterate on both index and element value
+
+squares = ['red', 'yellow', 'green', 'purple', 'blue']
+for i, square in enumerate(squares):
+    print(i, square)
+
+# while loop
+
+dates = [1982, 1980, 1973, 2000]
+
+i = 0
+year = 0
+
+while(year != 1973):
+    year = dates[i]
+    i = i + 1
+    print(year)
+    
+print("It took ", i, "repetitions to get out of loop.")
+
+# Functions
+
+# 2 types
+# pre-defined functions
+# user defined functions
+
+# always begin def followed by the function name and ()
+
+def add(a):
+    b = a + 1
+    print(a, 'if you add one', b)
+    return(b)
+
+help(add) # function help
+
+add(1) # call the function
+
+add(2)
+
+# Define a function for multiple two numbers
+def Mult(a, b):
+    c = a * b
+    print(c)
+    return(c)
+    
+
+Mult(3,4) # returns 12
+
+Mult(10.2, 3.14) # returns two float values
+
+Mult(2, "Michael Jackson ") # can multiply string values
+
+# Function Definition
+
+def square(a):
+    
+    #Local variable b
+    b = 1
+    c = a * a + b
+    print(a, "if you square + 1", c)
+    return(c)
+
+square(4)
+
+# to initialize a global variable
+
+x = 3
+# makes function call and return function y
+y = square(x)
+print(y)
+
+square(2) # directly enter the value as a parameter
+
+# Define functions, one with return value None and other without return value
+def MJ():
+    print('Michael Jackson')
+    
+def MJ1():
+    print('Michael Jackson')
+    return(None)
+
+MJ()
+MJ1()
+
+# concatenation function
+
+def con(a, b):
+    return(a + b)
+
+print(con("this ", "is"))
+
+# Functions for simplification
+
+# a and b calculation block1
+
+a1 = 4
+b1 = 5
+c1 = a1 + b1 + 2 * a1 * b1 - 1
+if(c1 < 0):
+    c1 = 0
+else:
+    c1 = 5
+c1
+
+
+# a and b calculation block2
+
+a2 = 0
+b2 = 0
+c2 = a2 + b2 + 2 * a2 * b2 - 1
+if(c2 < 0):
+    c2 = 0
+else:
+    c2 = 5
+c2
+
+
+# shorten the script by creating a function
+
+def Equation(a, b):
+    c = a + b + 2 * a * b - 1
+    if (c<0):
+        c = 0
+    else:
+        c = 5
+    return(c)
+
+print(Equation(5, 0))
+
+# Block1 and Block2 can now be replaced with code Block3 and Block4
+
+a1 = 4
+b1 = 5
+c1 = Equation(a1, b1)
+print(c1)
+
+a2 = 0
+b2 = 0
+c2 = Equation(a2, b2)
+print(c2)
+
+# pre-defined functions
+
+# print() function
+
+album_ratings = [10.0, 8.5, 9.5, 7.0, 7.0, 9.5, 9.0, 9.5]
+print(album_ratings)
+
+# sum() function
+print(sum(album_ratings))
+
+# len function
+print(len(album_ratings))
+
+# if/else Statements and Loops in functions
+
+def type_of_album(artist, album, year_released):
+    
+    print(artist, album, year_released)
+    if year_released > 1980:
+        return "Modern"
+    else:
+        return "Oldie"
+    
+x = type_of_album("Michael Jackson", "Thiller", 1980)
+print(x)
+
+# Print a list using a for loop
+
+def PrintList(the_list):
+    for element in the_list:
+        print(element)
+        
+PrintList(['1', 1, 'the man', "abc"])
+
+# setting default arguments
+
+def isGoodRating(rating = 4):
+    if(rating < 7):
+        print("this album sucks its rating is", rating)
+    else:
+        print("this album is good its rating is", rating)
+
+isGoodRating()
+isGoodRating(10)
+
+# Global variables
+
+artist = "Michael Jackson"
+def printer1(artist):
+    internal_var = artist # all variables defined within function are local
+    print(artist, "is an artist")
+    
+printer1(artist)
+# printer1(internal_var) # will return name not defined
+
+artist = "Michael Jackson"
+def printer(artist):
+    global internal_var
+    internal_var = "Whitney Houston"
+    print(artist, "is an artist")
+    
+printer(artist)
+printer(internal_var)
+
+# Example of a Global Variable
+
+myFavouriteBand = "AC/DC"
+
+def getBandRating(bandname):
+    if bandname == myFavouriteBand:
+        return 10.0
+    else:
+        return 0.0
+    
+print("AC/DC's rating is:", getBandRating("AC/DC"))
+print("Deep Purple's ratis is:", getBandRating("Deep Purple"))
+print("My favourite band is:", myFavouriteBand)
+
+# Example of a Local Variable
+
+def getBandRating(bandname):
+    myFavouriteBand = "AC/DC" # Local as it is within the function
+    if bandname == myFavouriteBand:
+        return 10.0
+    else:
+        return 0.0
+    
+print("AC/DC's rating is:", getBandRating("AC/DC"))
+print("Deep Purple's ratis is:", getBandRating("Deep Purple"))
+print("My favourite band is:", myFavouriteBand)
+
+# Local and Global Variable within the same name
+
+def getBandRating(bandname):
+    myFavouriteBand = "Deep Purple" # Local as it is within the function
+    if bandname == myFavouriteBand:
+        return 10.0
+    else:
+        return 0.0
+    
+print("AC/DC's rating is:", getBandRating("AC/DC"))
+print("Deep Purple's ratis is:", getBandRating("Deep Purple"))
+print("My favourite band is:", myFavouriteBand)
+
+# Objects and Classes
+
+# First Import a Library that contains classes
+
+import matplotlib.pyplot as plt
+
+# Create a class Circle
+
+class Circle(object):
+    
+    #Constructor
+    
+    def __init__(self, radius=3, color='blue'):
+        self.radius = radius
+        self.color = color
+        
+    # Method
+    
+    def add_radius(self, r):
+        self.radius = self.radius + r
+        return(self.radius)
+    
+    # Method
+    
+    def drawCircle(self):
+        plt.gca().add_patch(plt.Circle((0,0), radius=self.radius, fc=self.color))
+        plt.axis('scaled')
+        plt.show()
+        
+# Now that circle is defined, we can add dimensions
+
+RedCircle = Circle(10, 'red')
+print(RedCircle)
+
+print(dir(RedCircle)) # directory of attributes for our circle
+
+print(RedCircle.radius) # returns radius (method) of redcircle
+
+print(RedCircle.color) # returns color
+
+RedCircle.radius = 1 # can use method to change attributes of object
+print(RedCircle.radius)
+
+RedCircle.drawCircle() # draws circle calling function
+
+print('Radius of object:', RedCircle.radius)
+RedCircle.add_radius(2)
+print('Radius of object after applying method add_radius(2):', RedCircle.radius)
+RedCircle.add_radius(5)
+print('Radius of object after applying method add_radius(5):', RedCircle.radius)
+
+BlueCircle = Circle(radius= 100)
+# create a new circle with radius = 100 
+print(BlueCircle.radius)
+print(BlueCircle.color)
+
+BlueCircle.drawCircle()
+
+# Create an object Rectangle
+class Rectangle(object):
+    
+    # Constructor
+    def __init__(self, width = 2, height = 3, color = 'r'):
+        self.height = height
+        self.width = width
+        self.color = color
+        
+    # Method
+    def drawRectangle(self):
+        plt.gca().add_patch(plt.Rectangle((0,0), self.width, self.height, fc = self.color))
+        plt.axis('scaled')
+        plt.show()
+
+# Create a new Rectangel
+
+SkinnyBlueRectangle = Rectangle(2, 10, 'blue')
+print(SkinnyBlueRectangle.height)
+print(SkinnyBlueRectangle.width)
+print(SkinnyBlueRectangle.color)
+
+# Using created method to draw the shape
+SkinnyBlueRectangle.drawRectangle()
+
+FatYellowRectangle = Rectangle(20, 5, 'yellow')
+print(FatYellowRectangle.height)
+print(FatYellowRectangle.width)
+print(FatYellowRectangle.color)
+
+FatYellowRectangle.drawRectangle()
